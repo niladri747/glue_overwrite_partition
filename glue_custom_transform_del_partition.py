@@ -1,14 +1,3 @@
-# Import necessary AWS Glue and Spark libraries
-import sys
-from awsglue.transforms import *
-from awsglue.utils import getResolvedOptions
-from pyspark.context import SparkContext
-from awsglue.context import GlueContext
-from awsglue.job import Job
-from awsglue.dynamicframe import DynamicFrameCollection
-from awsglue.dynamicframe import DynamicFrame
-from awsglue import DynamicFrame
-
 # Custom transformation function to handle partition management and data processing
 def MyTransform(glueContext, dfc) -> DynamicFrameCollection:
     # Convert DynamicFrame to Spark DataFrame for easier manipulation
